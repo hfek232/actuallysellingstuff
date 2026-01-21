@@ -1,0 +1,13 @@
+{
+  "email_welcome_subject": "Welcome to Our Platform!",
+  "email_welcome_body": "Thank you for joining our platform. We're excited to have you!",
+  "email_order_confirmation_subject": "Your Order #{orderId} Confirmation",
+  "email_order_confirmation_body": "Your order has been successfully placed. Details: {orderDetails}",
+  "email_signature": "Best regards,\nThe App Team",
+  "contact_form_title": "Contact Us",
+  "name_label": "Your Name",
+  "email_label": "Your Email",
+  "message_label": "Your Message",
+  "send_email_button": "Send Message",
+  "contact_us_description": "If you have any questions or need assistance, please fill out the form below and we will get back to you as soon as possible."
+}

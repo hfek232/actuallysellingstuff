@@ -1,0 +1,22 @@
+{
+  "home": "Home",
+  "mart": "Mart",
+  "our_story": "Our Story",
+  "contact_us": "Contact Us",
+  "commercial": "Commercial",
+  "all_commercial_projects": "All Commercial Projects",
+  "sectors": "Sectors",
+  "hospitality": "Hospitality",
+  "offices": "Offices & Workspaces",
+  "retail": "Retail Spaces",
+  "public_institutional": "Public & Institutional",
+  "showcase": "Showcase",
+  "our_portfolio": "Our Portfolio",
+  "our_process": "Our Process",
+  "request_a_quote": "Request a Quote",
+  "sales_and_support": "Sales and Support",
+  "products_link_path": "products",
+  "mart_link_path": "mart",
+  "contact_us_link_path": "contact-us",
+  "supplier_onboarding_link_path": "supplier-onboarding"
+}

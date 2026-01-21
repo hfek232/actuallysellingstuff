@@ -1,0 +1,17 @@
+{
+
+  "email_welcome_subject": "ወደ መድረካችን እንኳን ደህና መጡ!",
+  "email_welcome_body": "መድረካችንን ስለተቀላቀሉ እናመሰግናለን። እርስዎን በማግኘታችን ደስተኞች ነን!",
+  "email_order_confirmation_subject": "የእርስዎ ትዕዛዝ #{orderId} ማረጋገጫ",
+  "email_order_confirmation_body": "ትዕዛዝዎ በተሳካ ሁኔታ ተቀምጧል። ዝርዝሮች: {orderDetails}",
+  "email_signature": "ከሰላምታ ጋር፣\nየመተግበሪያ ቡድን",
+  "contact_form_title": "ያግኙን",
+  "name_label": "ስም",
+  "email_label": "Your Email",
+  "message_label": "Your Message",
+  "send_email_button": "Send Message",
+  "contact_us_description": "ጥዛዝ ለማዘዝ ወይንም መረጃ ከፈለጉ እባኮትን በታች ያለውን ቅጽ ይሙሉ፣ እና ወዲያውኑ እንደምንሰጥዎ እናሳውቃለን።"
+
+
+  
+}
