@@ -13,7 +13,7 @@ const MartDisplay: React.FC = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data, error } = await supabase.from("inethioproducts").select("*");
+      const { data, error } = await supabase.from("products").select("*");
       if (error) {
         // Handle error
         setProducts([]);

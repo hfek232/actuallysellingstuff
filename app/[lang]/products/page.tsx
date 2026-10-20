@@ -26,7 +26,7 @@ export default function ProductsPage() {
       setLoading(true);
       const supabase = createClient(); // Initialize client-side Supabase
 
-      let query = supabase.from('inethioproducts').select('*');
+      let query = supabase.from('products').select('*');
       if (category) {
         query = query.eq('category', category); // Filter by category
       }

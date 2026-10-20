@@ -16,7 +16,7 @@ import { promises as fs } from 'fs'; // Node.js file system module for reading f
 import i18nConfig from '@/i18nConfig'; // Your internationalization configuration
 import Link from 'next/link'; // Next.js Link component for client-side navigation
 import { Button } from '@/components/ui/button'; // Assuming you have a Button component
-import { ShoppingCart, ArrowLeft } from 'lucide-react'; // Icons
+ // Icons
 
 // Helper function to get the translation function for Server Components.
 // This function initializes a fresh i18next instance for each server-side request
@@ -72,7 +72,7 @@ const i18nNamespaces = ['common', 'products'];
 
 // Interface for ProductPage component props, including 'lang' and 'slug'
 interface ProductPageProps {
-  params: { lang: string; slug: string }; // params is a direct object on Server Components
+  params: Promise<{ lang: string; slug: string }>; // params is a direct object on Server Components
 }
 
 /**
@@ -85,7 +85,7 @@ export async function generateStaticParams() {
 
   // Fetch all product slugs from your Supabase table
   const { data: products, error } = await supabase
-    .from('inethioproducts')
+    .from('products')
     .select('slug'); // Only fetch the 'slug' column to minimize data transfer
 
   if (error) {
@@ -110,7 +110,7 @@ export async function generateStaticParams() {
 // The ProductPage Server Component for displaying individual product details.
 export default async function ProductPage({ params }: ProductPageProps) {
   // Destructure both 'lang' (locale) and 'slug' from the params object.
-  const { lang: locale, slug } = params;
+  const { lang: locale, slug } = await params;
 
   // Get the translation function for this page based on the current locale.
   // CRITICAL: Pass both 'common' and 'products' namespaces to getT
@@ -120,7 +120,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   // Fetch the full details of the specific product based on its slug.
   const { data: product, error } = await supabase
-    .from('inethioproducts')
+    .from('products')
     .select('*')
     .eq('slug', slug) // Filter by the product slug
     .single(); // Expecting a single result

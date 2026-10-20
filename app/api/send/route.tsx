@@ -15,7 +15,7 @@ import i18nConfig from '@/i18nConfig'; // Your i18n configuration
 
 // React Email imports
 import { render } from '@react-email/render'; // Import render function
-import ContactFormEmail from '@/emails/ContactFormEmail';
+import { ContactFormEmail } from '@/emails/ContactFormEmail';
 // Initialize Resend with your API key from environment variables
 const resend = new Resend(process.env.RESEND_API_KEY);
 
