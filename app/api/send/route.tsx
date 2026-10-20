@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import i18nConfig from "@/i18nConfig";
-import initTranslations from "@/app/i18n";
+import initTranslations from "@/lib/i18n";
 import { render } from "@react-email/components";
-import ContactEmail from "@/emails/ContactEmail";
+import ContactEmail from "@/emails/ContactFormEmail";
 
 const ns = ["common", "email"];
 
@@ -30,7 +30,7 @@ export async function POST(request: Request) {
 
     console.log(`API: Sending email for locale: ${locale}`);
 
-    const t = await initTranslations(locale, ns);
+    const { t } = await initTranslations(locale, ns);
 
     const translatedSubject = t(subjectKey, { ns: "email", ...dynamicData });
     const translatedBody = t(bodyKey, { ns: "email", ...dynamicData });
