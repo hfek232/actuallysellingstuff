@@ -3,7 +3,7 @@ import { Resend } from "resend";
 import i18nConfig from "@/i18nConfig";
 import { createI18nInstance } from "@/lib/i18n";
 import { render } from "@react-email/components";
-import ContactEmail from "@/emails/ContactFormEmail";
+import { ContactFormEmail } from "@/emails/ContactFormEmail";
 import fs from "fs/promises";
 import path from "path";
 
@@ -77,7 +77,7 @@ export async function POST(request: Request) {
     const emailSignature = i18nInstance.t("email_signature", { ns: "email" });
 
     const html = await render(
-      <ContactEmail
+      <ContactFormEmail
         userName={dynamicData.userName}
         userEmail={dynamicData.userEmail}
         userMessage={dynamicData.userMessage}
